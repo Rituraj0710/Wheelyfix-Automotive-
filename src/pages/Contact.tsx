@@ -14,7 +14,11 @@ import {
   MessageSquare,
   Send,
   Star,
-  CheckCircle
+  CheckCircle,
+  Facebook,
+  Instagram,
+  Linkedin,
+  Youtube
 } from "lucide-react"
 
 const Contact = () => {
@@ -98,6 +102,54 @@ const Contact = () => {
                 </CardContent>
               </Card>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Social Media */}
+      <section className="py-12 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-8">
+            <h3 className="text-2xl font-bold text-gray-900">Follow Us</h3>
+            <p className="text-gray-600">Stay connected on social media</p>
+          </div>
+          <div className="flex items-center justify-center gap-6">
+            <a
+              href="https://www.instagram.com/wheelyfix?igsh=aDhsbGQ5dnk0MmVz"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Wheelyfix on Instagram"
+              className="text-gray-600 hover:text-accent transition-colors"
+            >
+              <Instagram className="h-7 w-7" />
+            </a>
+            <a
+              href="https://www.linkedin.com/company/wheelyfix/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Wheelyfix on LinkedIn"
+              className="text-gray-600 hover:text-accent transition-colors"
+            >
+              <Linkedin className="h-7 w-7" />
+            </a>
+            <a
+              href="https://youtube.com/@wheelyfix?si=cMn2dLNFU5hT_odZ"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Wheelyfix on YouTube"
+              className="text-gray-600 hover:text-accent transition-colors"
+            >
+              <Youtube className="h-7 w-7" />
+            </a>
+            <a
+              href="https://www.facebook.com/share/16xRv9X6Dd/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Wheelyfix on Facebook"
+              className="text-gray-600 hover:text-accent transition-colors"
+            >
+              <Facebook className="h-7 w-7" />
+            </a>
           </div>
         </div>
       </section>

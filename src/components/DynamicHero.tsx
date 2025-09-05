@@ -735,14 +735,14 @@ const DynamicHero = () => {
                     <div className="grid grid-cols-2 gap-4">
                       <div
                         className="flex items-center space-x-2 p-3 border-2 border-gray-200 rounded-lg hover:border-orange-500 cursor-pointer transition-colors"
-                        onClick={() => setShowVehicleSelection(true)}
+                        onClick={() => { setSelectedVehicleType('car'); setShowVehicleSelection(true); setSelectionStep('fuel-type'); }}
                       >
                         <Car className="h-5 w-5 text-gray-600" />
                         <span className="font-medium">Car Service</span>
                       </div>
                       <div
                         className="flex items-center space-x-2 p-3 border-2 border-gray-200 rounded-lg hover:border-orange-500 cursor-pointer transition-colors"
-                        onClick={() => setShowVehicleSelection(true)}
+                        onClick={() => { setSelectedVehicleType('bike'); setShowVehicleSelection(true); setSelectionStep('brand'); }}
                       >
                         <Bike className="h-5 w-5 text-gray-600" />
                         <span className="font-medium">Bike Service</span>
@@ -774,6 +774,12 @@ const DynamicHero = () => {
                     <Button
                       type="submit"
                       className="w-full h-12 text-white bg-orange-600 hover:bg-orange-700 font-semibold text-lg shadow-lg"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        const params = new URLSearchParams();
+                        if (selectedVehicleType) params.set('type', selectedVehicleType);
+                        navigate(params.toString() ? `/services?${params.toString()}` : '/services');
+                      }}
                     >
                       {heroContent?.cta_text || "GET FREE QUOTE"}
                     </Button>

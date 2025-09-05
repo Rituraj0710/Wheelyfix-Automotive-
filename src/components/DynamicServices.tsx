@@ -144,6 +144,11 @@ const DynamicServices = () => {
       color: 'teal' 
     },
     { 
+      name: 'Clutch & Body Parts', 
+      image: 'https://images.unsplash.com/photo-1607860108855-64acf2078ed9?w=400&h=400&fit=crop&crop=center&q=80', 
+      color: 'rose' 
+    },
+    { 
       name: 'Insurance Claims', 
       image: 'https://images.unsplash.com/photo-1571068316344-75bc76f77890?w=400&h=400&fit=crop&crop=center&q=80', 
       color: 'emerald' 

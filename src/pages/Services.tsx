@@ -1,3 +1,4 @@
+import React from "react"
 import Header from "@/components/Header"
 import Footer from "@/components/Footer"
 import PageBanner from "@/components/PageBanner"
@@ -14,23 +15,29 @@ const Services = () => {
       category: "Car Services",
       icon: <Car className="h-8 w-8" />,
       items: [
-        { name: "Basic Service", price: "₹999", duration: "2 hours", description: "Engine oil change, filter replacement, basic inspection", popular: false },
-        { name: "Comprehensive Service", price: "₹2499", duration: "4 hours", description: "Complete vehicle inspection and maintenance", popular: true },
-        { name: "AC Service", price: "₹1299", duration: "3 hours", description: "AC gas refill, filter cleaning, cooling check", popular: false },
-        { name: "Battery Service", price: "₹599", duration: "1 hour", description: "Battery testing, terminal cleaning, replacement if needed", popular: false },
-        { name: "Brake Service", price: "₹1899", duration: "3 hours", description: "Brake pad replacement, fluid change, inspection", popular: false },
-        { name: "Suspension Service", price: "₹2199", duration: "4 hours", description: "Shock absorber check, spring inspection, alignment", popular: false }
+        { name: "Car Services", image: "https://images.unsplash.com/photo-1542362567-b07e54358753?w=400&h=300&fit=crop&crop=center&q=80", price: "", duration: "", description: "General service and periodic maintenance packages.", popular: true },
+        { name: "AC Service & Repair", image: "https://images.unsplash.com/photo-1486006920555-c77dcf18193c?w=400&h=300&fit=crop&crop=center&q=80", price: "", duration: "", description: "AC diagnostics, gas refill, and cooling system repair.", popular: false },
+        { name: "Batteries", image: "https://images.unsplash.com/photo-1593941707882-a5bac6861d75?w=400&h=300&fit=crop&crop=center&q=80", price: "", duration: "", description: "Battery testing, replacement, and terminal cleaning.", popular: false },
+        { name: "Tyres & Wheel Care", image: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=400&h=300&fit=crop&crop=center&q=80", price: "", duration: "", description: "Tyre change, balancing, alignment, and rotation.", popular: false },
+        { name: "Denting & Painting", image: "https://images.unsplash.com/photo-1607860108855-64acf2078ed9?w=400&h=300&fit=crop&crop=center&q=80", price: "", duration: "", description: "Body repair, paint jobs, and scratch removal.", popular: false },
+        { name: "Detailing Services", image: "https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?w=400&h=300&fit=crop&crop=center&q=80", price: "", duration: "", description: "Interior and exterior detailing with protection.", popular: false },
+        { name: "Car Spa & Cleaning", image: "https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=400&h=300&fit=crop&crop=center&q=80", price: "", duration: "", description: "Deep wash, interior vacuuming, and polishing.", popular: false },
+        { name: "Car Inspections", image: "https://images.unsplash.com/photo-1517048676732-d65bc937f952?w=400&h=300&fit=crop&crop=center&q=80", price: "", duration: "", description: "Comprehensive inspection with health report.", popular: false },
+        { name: "Windshields & Lights", image: "https://images.unsplash.com/photo-1544636331-e26879cd4d9b?w=400&h=300&fit=crop&crop=center&q=80", price: "", duration: "", description: "Windshield replacement and lighting repair.", popular: false },
+        { name: "Suspension & Fitments", image: "https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=400&h=300&fit=crop&crop=center&q=80", price: "", duration: "", description: "Suspension service and accessories fitments.", popular: false },
+        { name: "Clutch & Body Parts", image: "https://images.unsplash.com/photo-1607860108855-64acf2078ed9?w=400&h=300&fit=crop&crop=center&q=80", price: "", duration: "", description: "Clutch work and body parts replacement.", popular: false },
+        { name: "Insurance Claims", image: "https://images.unsplash.com/photo-1571068316344-75bc76f77890?w=400&h=300&fit=crop&crop=center&q=80", price: "", duration: "", description: "End-to-end assistance for insurance claims.", popular: false }
       ]
     },
     {
       category: "Bike Services",
       icon: <Bike className="h-8 w-8" />,
       items: [
-        { name: "Basic Service", price: "₹499", duration: "1 hour", description: "Engine oil change, chain lubrication, basic check", popular: false },
-        { name: "Comprehensive Service", price: "₹1299", duration: "2 hours", description: "Complete bike inspection and maintenance", popular: true },
-        { name: "Chain & Sprocket", price: "₹899", duration: "2 hours", description: "Chain cleaning, sprocket inspection, replacement", popular: false },
-        { name: "Brake Service", price: "₹699", duration: "1.5 hours", description: "Brake pad replacement, cable adjustment", popular: false },
-        { name: "Engine Tuning", price: "₹1599", duration: "3 hours", description: "Carburetor cleaning, spark plug replacement", popular: false }
+        { name: "Basic Service", image: "https://images.unsplash.com/photo-1519340241574-2cec6aef0c01?w=400&h=300&fit=crop&crop=center&q=80", price: "₹499", duration: "1 hour", description: "Engine oil change, chain lubrication, basic check", popular: false },
+        { name: "Comprehensive Service", image: "https://images.unsplash.com/photo-1532298229144-0ec0c57515c7?w=400&h=300&fit=crop&crop=center&q=80", price: "₹1299", duration: "2 hours", description: "Complete bike inspection and maintenance", popular: true },
+        { name: "Chain & Sprocket", image: "https://images.unsplash.com/photo-1519750783826-e2420f4d687f?w=400&h=300&fit=crop&crop=center&q=80", price: "₹899", duration: "2 hours", description: "Chain cleaning, sprocket inspection, replacement", popular: false },
+        { name: "Brake Service", image: "https://images.unsplash.com/photo-1519985176271-adb1088fa94c?w=400&h=300&fit=crop&crop=center&q=80", price: "₹699", duration: "1.5 hours", description: "Brake pad replacement, cable adjustment", popular: false },
+        { name: "Engine Tuning", image: "https://images.unsplash.com/photo-1493238792000-8113da705763?w=400&h=300&fit=crop&crop=center&q=80", price: "₹1599", duration: "3 hours", description: "Carburetor cleaning, spark plug replacement", popular: false }
       ]
     }
   ]
@@ -63,6 +70,28 @@ const Services = () => {
   const qs = new URLSearchParams(location.search)
   const selectedType = qs.get('type') // 'car' | 'bike'
   const { user } = useAuth()
+
+  // Scroll to the requested section when coming with ?type=car|bike
+  // and also when the query param changes via client-side navigation
+  React.useEffect(() => {
+    if (!selectedType) return
+    const targetId = selectedType === 'car' ? 'car-services' : 'bike-services'
+    const el = document.getElementById(targetId)
+    if (el) {
+      // small timeout ensures the section is in the DOM and laid out
+      setTimeout(() => {
+        el.scrollIntoView({ behavior: 'smooth', block: 'start' })
+      }, 0)
+    }
+  }, [selectedType])
+
+  const toSlug = (value: string) =>
+    value
+      .toLowerCase()
+      .replace(/&/g, 'and')
+      .replace(/[^a-z0-9]+/g, '-')
+      .replace(/(^-|-$)+/g, '')
+
 
   const handleBookNow = (serviceName: string) => {
     if (!user) {
@@ -114,10 +143,11 @@ const Services = () => {
           </div>
 
           <div className="space-y-16">
-            {services
-              .filter(category => !selectedType || (selectedType === 'car' ? category.category.includes('Car') : category.category.includes('Bike')))
-              .map((category) => (
-              <div key={category.category}>
+            {services.map((category) => (
+              <div
+                key={category.category}
+                id={category.category.toLowerCase().includes('car') ? 'car-services' : 'bike-services'}
+              >
                 <div className="text-center mb-12">
                   <div className="inline-flex items-center space-x-3 bg-white px-6 py-3 rounded-full shadow-sm mb-4">
                     <div className="text-accent">{category.icon}</div>
@@ -128,6 +158,11 @@ const Services = () => {
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                   {category.items.map((service) => (
                     <Card key={service.name} className={`hover:shadow-xl transition-all duration-300 hover:-translate-y-1 ${service.popular ? 'ring-2 ring-accent' : ''}`}>
+                      {service.image && (
+                        <div className="mb-4 overflow-hidden rounded-md h-40">
+                          <img src={service.image} alt={service.name} className="w-full h-full object-cover" />
+                        </div>
+                      )}
                       <CardHeader className="pb-4">
                         <div className="flex justify-between items-start mb-2">
                           <CardTitle className="text-xl">{service.name}</CardTitle>
@@ -149,9 +184,11 @@ const Services = () => {
                           <Button className="w-full bg-accent hover:bg-accent/90" onClick={() => handleBookNow(service.name)}>
                             Book Now
                           </Button>
-                          <Button variant="outline" className="w-full border-accent text-accent hover:bg-accent hover:text-white">
-                            Learn More
-                          </Button>
+                          <Link to={`/services/${toSlug(service.name)}`}>
+                            <Button variant="outline" className="w-full border-accent text-accent hover:bg-accent hover:text-white">
+                              Learn More
+                            </Button>
+                          </Link>
                         </div>
                       </CardContent>
                     </Card>

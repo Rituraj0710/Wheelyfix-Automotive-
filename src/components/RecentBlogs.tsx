@@ -253,6 +253,7 @@ interface Vlog {
   url: string;
   duration?: string;
   views?: string;
+  articleUrl?: string;
 }
 
 // Keep static data outside the component (perf + lint)
@@ -266,9 +267,10 @@ const DEFAULT_VLOGS: Vlog[] = [
       "https://images.unsplash.com/photo-1486006920555-c77dcf18193c?w=800&h=450&fit=crop&crop=center",
     channel: "AutoExpert Channel",
     publishDate: "2024-01-15",
-    url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+    url: "https://www.youtube.com/results?search_query=car+service+tips",
     duration: "12:34",
     views: "45.2K",
+    articleUrl: "https://en.wikipedia.org/wiki/Vehicle_maintenance",
   },
   {
     id: "2",
@@ -279,9 +281,10 @@ const DEFAULT_VLOGS: Vlog[] = [
       "https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=800&h=450&fit=crop&crop=center",
     channel: "TechAuto Reviews",
     publishDate: "2024-01-14",
-    url: "https://www.youtube.com/watch?v=9bZkp7q19f0",
+    url: "https://www.youtube.com/results?search_query=adas+technology+cars+2024",
     duration: "18:22",
     views: "32.1K",
+    articleUrl: "https://en.wikipedia.org/wiki/Advanced_driver-assistance_systems",
   },
   {
     id: "3",
@@ -292,9 +295,10 @@ const DEFAULT_VLOGS: Vlog[] = [
       "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=800&h=450&fit=crop&crop=center",
     channel: "Car Care Pro",
     publishDate: "2024-01-13",
-    url: "https://www.youtube.com/watch?v=JGwWNGJdvx8",
+    url: "https://www.youtube.com/results?search_query=ceramic+coating+vs+ppf",
     duration: "15:47",
     views: "28.9K",
+    articleUrl: "https://en.wikipedia.org/wiki/Paint_protection_film",
   },
   {
     id: "4",
@@ -305,9 +309,10 @@ const DEFAULT_VLOGS: Vlog[] = [
       "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=800&h=450&fit=crop&crop=center",
     channel: "Auto India",
     publishDate: "2024-01-12",
-    url: "https://www.youtube.com/watch?v=1Bix44H1qvY",
+    url: "https://www.youtube.com/results?search_query=multi+brand+service+center+india",
     duration: "22:15",
     views: "56.7K",
+    articleUrl: "https://en.wikipedia.org/wiki/Automobile_repair_shop",
   },
   {
     id: "5",
@@ -318,9 +323,10 @@ const DEFAULT_VLOGS: Vlog[] = [
       "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=450&fit=crop&crop=center",
     channel: "Startup Stories",
     publishDate: "2024-01-11",
-    url: "https://www.youtube.com/watch?v=3YxaaGmT_Mk",
+    url: "https://www.youtube.com/@wheelyfix/videos",
     duration: "25:33",
     views: "18.4K",
+    articleUrl: "https://www.linkedin.com/company/wheelyfix/",
   },
   {
     id: "6",
@@ -331,9 +337,10 @@ const DEFAULT_VLOGS: Vlog[] = [
       "https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?w=800&h=450&fit=crop&crop=center",
     channel: "Mechanic Tips",
     publishDate: "2024-01-10",
-    url: "https://www.youtube.com/watch?v=ZZ5LpwO-An4",
+    url: "https://www.youtube.com/results?search_query=car+maintenance+checklist",
     duration: "19:48",
     views: "41.3K",
+    articleUrl: "https://en.wikipedia.org/wiki/Vehicle_inspection",
   },
 ];
 
@@ -412,6 +419,7 @@ const RecentVlogs = () => {
             type="button"
             variant="outline"
             className="mt-4 md:mt-0 border-accent text-accent hover:bg-accent hover:text-white"
+            onClick={() => window.open("https://www.youtube.com/@wheelyfix/videos", "_blank", "noopener,noreferrer")}
           >
             View all vlogs
           </Button>
@@ -478,13 +486,32 @@ const RecentVlogs = () => {
                 )}
 
                 {/* CTA Button */}
-                <Button
-                  type="button"
-                  className="w-full bg-accent hover:bg-accent/90 text-white group-hover:bg-accent/80 transition-colors"
-                >
-                  Watch vlog →
-                  <ExternalLink className="h-4 w-4 ml-2" />
-                </Button>
+                <div className="flex gap-3">
+                  <Button
+                    type="button"
+                    className="w-full bg-accent hover:bg-accent/90 text-white group-hover:bg-accent/80 transition-colors"
+                    onClick={() => handleCardClick(vlog.url)}
+                  >
+                    Watch vlog →
+                    <ExternalLink className="h-4 w-4 ml-2" />
+                  </Button>
+                  {vlog.articleUrl && (
+                    <a
+                      href={vlog.articleUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-full"
+                    >
+                      <Button
+                        type="button"
+                        variant="outline"
+                        className="w-full border-accent text-accent hover:bg-accent hover:text-white"
+                      >
+                        Read article
+                      </Button>
+                    </a>
+                  )}
+                </div>
               </div>
             </Card>
           ))}

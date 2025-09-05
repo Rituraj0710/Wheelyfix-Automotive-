@@ -408,41 +408,42 @@ const Footer = () => {
                 services with genuine parts.
               </p>
               <div className="flex space-x-4 mt-2">
-                <Button
-                  variant="ghost"
-                  size="sm"
+                <a
+                  href="https://www.facebook.com/share/16xRv9X6Dd/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Wheelyfix on Facebook"
                   className="text-gray-400 hover:text-accent transition-colors duration-200"
                 >
                   <Facebook className="h-5 w-5" />
-                </Button>
-                <Button
-                  variant="ghost"
-                  size="sm"
-                  className="text-gray-400 hover:text-accent transition-colors duration-200"
-                >
-                  <Twitter className="h-5 w-5" />
-                </Button>
-                <Button
-                  variant="ghost"
-                  size="sm"
+                </a>
+                <a
+                  href="https://www.instagram.com/wheelyfix?igsh=aDhsbGQ5dnk0MmVz"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Wheelyfix on Instagram"
                   className="text-gray-400 hover:text-accent transition-colors duration-200"
                 >
                   <Instagram className="h-5 w-5" />
-                </Button>
-                <Button
-                  variant="ghost"
-                  size="sm"
+                </a>
+                <a
+                  href="https://www.linkedin.com/company/wheelyfix/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Wheelyfix on LinkedIn"
                   className="text-gray-400 hover:text-accent transition-colors duration-200"
                 >
                   <Linkedin className="h-5 w-5" />
-                </Button>
-                <Button
-                  variant="ghost"
-                  size="sm"
+                </a>
+                <a
+                  href="https://youtube.com/@wheelyfix?si=cMn2dLNFU5hT_odZ"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Wheelyfix on YouTube"
                   className="text-gray-400 hover:text-accent transition-colors duration-200"
                 >
                   <Youtube className="h-5 w-5" />
-                </Button>
+                </a>
               </div>
             </div>
 
